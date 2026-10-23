@@ -101,7 +101,7 @@ console.log ("Valor final com desconto: " + valor - calculo);
 } else {
     alert("Valor final: R$" + valor)
 }*/
-
+/*/
 const number =Number(prompt("Digite um numero"))
 const number1=Number(prompt("Digite outro numero"))
 const number2 =Number(prompt("Digite mais um numero"))
@@ -115,4 +115,37 @@ if (Number.isNaN(number, number1, number2)) {
     if (c > maior) maior = c;
     console.log("O maior número é: " + maior);
 
+}*/
+
+const n1 =Number(prompt("Digite um numero:"))
+const n2 =Number(prompt("Digite outro numero"))
+const operacao =prompt("Agora digite uma operação ( +, -, *, /)")
+let resultado
+
+if (Number.isNaN(n1) && Number.isNaN(n2)) {
+    alert("Numero inválido!!")
+} else {
+
+switch (operacao) {
+    case "+":
+      resultado = n1 + n2;  
+      alert(`Este e o resultado ${resultado}`)
+    case "-":
+      resultado = n1 - n2;  
+      alert(`Este e o resultado ${resultado}`)
+    case "*":
+      resultado = n1 * n2;  
+      alert(`Este e o resultado ${resultado}`)
+    case "/":
+     if (n2 === 0) {
+        console.log("Divisão por zero não é permitido.")
+     } else {
+        resultado = n1 / n2;
+        alert(`Este e o resultado ${resultado}`)
+     }
+        break;
+
+    default:
+        alert("Operação inválida")
+}
 }
